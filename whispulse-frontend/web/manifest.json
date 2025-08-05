@@ -1,6 +1,6 @@
 {
-    "name": "whishpulse",
-    "short_name": "whishpulse",
+    "name": "getnew",
+    "short_name": "getnew",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

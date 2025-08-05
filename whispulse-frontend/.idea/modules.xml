@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/whishpulse.iml" filepath="$PROJECT_DIR$/whishpulse.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/whishpulse_android.iml" filepath="$PROJECT_DIR$/android/whishpulse_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/getnew.iml" filepath="$PROJECT_DIR$/getnew.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/getnew_android.iml" filepath="$PROJECT_DIR$/android/getnew_android.iml" />
     </modules>
   </component>
 </project>

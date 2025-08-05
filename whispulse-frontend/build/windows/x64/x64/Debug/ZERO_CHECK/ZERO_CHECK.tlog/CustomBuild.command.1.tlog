@@ -1,0 +1,10 @@
+^C:\PROJECTS\WHISHPULSE\BUILD\WINDOWS\X64\CMAKEFILES\C9F6F1C8E62DA7CE4A415B34DE0312DF\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Projects/whishpulse/windows -BC:/Projects/whishpulse/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Projects/whishpulse/build/windows/x64/whishpulse.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

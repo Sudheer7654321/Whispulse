@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
+import 'package:getnew/screens/news_detail_screen.dart';
 import 'package:getnew/services/news/trending_service.dart';
 import 'package:getnew/utils/app_colors.dart';
+import 'package:getnew/utils/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MainNewsScreen extends StatefulWidget {
   const MainNewsScreen({super.key});
 
-  @override   
+  @override
   State<MainNewsScreen> createState() => _MainNewsScreenState();
 }
 
@@ -128,13 +131,38 @@ class _MainNewsScreenState extends State<MainNewsScreen> {
                       isLoop: true,
                       cardBuilder: (context, index, _, __) {
                         final news = data[index].data();
-                        return _buildNewsCard(
-                          title: news['title'] ?? '',
-                          description: news['description'] ?? '',
-                          tag: news['tag'] ?? '',
-                          image: news['image'],
-                          score: (news['score'] ?? 0).toDouble(),
-                          timestamp: news['timestamp'].toString(),
+                        return GestureDetector(
+                          onTap: () async {
+                            // final url = Uri.parse(news['post_url']);
+                            // if (!await launchUrl(url)) {
+                            //   throw Exception('Could not launch $url');
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => NewsDetailScreen(
+                                   color:
+                                MyColors().cardColors[index %
+                                    MyColors().cardColors.length],
+                                  title: news['title'] ?? '',
+                                  description: news['description'] ?? '',
+                                  tag: news['tag'] ?? '',
+                                  score: news['score'] ?? '',
+                                ),
+                              ),
+                            );
+                            // }
+                          },
+                          child: _buildNewsCard(
+                            color:
+                                MyColors().cardColors[index %
+                                    MyColors().cardColors.length],
+                            title: news['title'] ?? '',
+                            description: news['description'] ?? '',
+                            tag: news['tag'] ?? '',
+                            image: news['image'],
+                            score: (news['score'] ?? 0).toDouble(),
+                            timestamp: news['timestamp'].toString(),
+                          ),
                         );
                       },
                     ),
@@ -153,6 +181,7 @@ class _MainNewsScreenState extends State<MainNewsScreen> {
 
   /// Builds a single news card widget
   Widget _buildNewsCard({
+    required Color color,
     required String title,
     required String description,
     required String tag,
@@ -164,7 +193,7 @@ class _MainNewsScreenState extends State<MainNewsScreen> {
       margin: const EdgeInsets.all(12),
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: AppColors.pink,
+        color: color,
         borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(

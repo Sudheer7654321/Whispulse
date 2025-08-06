@@ -18,7 +18,8 @@ class _MainAppScreenState extends State<MainAppScreen> {
   // Your different screens/pages
   final List<Widget> _pages = [
     MainNewsScreen(),
-    NewsDetailScreen(),
+    // NewsDetailScreen(title: title, description: description, tag: tag, score: score),
+    Placeholder(),
     SavedNewsScreen(),
   ];
 

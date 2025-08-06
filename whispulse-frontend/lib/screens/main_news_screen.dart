@@ -8,7 +8,7 @@ import 'package:hugeicons/hugeicons.dart';
 class MainNewsScreen extends StatefulWidget {
   const MainNewsScreen({super.key});
 
-  @override
+  @override   
   State<MainNewsScreen> createState() => _MainNewsScreenState();
 }
 

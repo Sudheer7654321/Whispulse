@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "411541045729",
+    "project_id": "whispulse-90474",
+    "storage_bucket": "whispulse-90474.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411541045729:android:d8efa390620cc8b6af52a0",
+        "android_client_info": {
+          "package_name": "com.example.getnew"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB3qmiU3q_OMVzJUaUBuCfizmkdvRNVdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

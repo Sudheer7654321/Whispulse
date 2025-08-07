@@ -40,23 +40,41 @@ class NewsDetailScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Category Chip
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 6,
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.black12,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Text(
-                  tag,
-                  style: GoogleFonts.outfit(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black54,
-                    fontSize: 14,
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 6,
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.black12,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Text(
+                      tag,
+                      style: GoogleFonts.outfit(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black54,
+                        fontSize: 14,
+                      ),
+                    ),
                   ),
-                ),
+                  Spacer(),
+                  Icon(
+                    score >= 0 ? Icons.trending_up : Icons.trending_down,
+                    color: score >= 0 ? Colors.green : Colors.red,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    score.toString(),
+                    style: GoogleFonts.outfit(
+                      color: score >= 0 ? Colors.green : Colors.red,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 16),
 
@@ -94,25 +112,6 @@ class NewsDetailScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-
-              // Score Indicator
-              Row(
-                children: [
-                  Icon(
-                    score >= 0 ? Icons.trending_up : Icons.trending_down,
-                    color: score >= 0 ? Colors.green : Colors.red,
-                  ),
-                  const SizedBox(width: 8),
-                  Text(
-                    score.toString(),
-                    style: GoogleFonts.outfit(
-                      color: score >= 0 ? Colors.green : Colors.red,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
             ],
           ),
         ),

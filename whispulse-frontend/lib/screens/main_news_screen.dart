@@ -126,7 +126,7 @@ class _MainNewsScreenState extends State<MainNewsScreen> {
                     child: CardSwiper(
                       cardsCount: data.length,
                       numberOfCardsDisplayed: 3,
-                      backCardOffset: const Offset(40, 20),
+                      backCardOffset: const Offset(25, -30),
                       padding: const EdgeInsets.all(8),
                       isLoop: true,
                       cardBuilder: (context, index, _, __) {
@@ -140,9 +140,9 @@ class _MainNewsScreenState extends State<MainNewsScreen> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => NewsDetailScreen(
-                                   color:
-                                MyColors().cardColors[index %
-                                    MyColors().cardColors.length],
+                                  color:
+                                      MyColors().cardColors[index %
+                                          MyColors().cardColors.length],
                                   title: news['title'] ?? '',
                                   description: news['description'] ?? '',
                                   tag: news['tag'] ?? '',

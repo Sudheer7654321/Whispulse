@@ -6,7 +6,6 @@ import 'package:getnew/utils/app_colors.dart';
 import 'package:getnew/utils/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class MainNewsScreen extends StatefulWidget {
   const MainNewsScreen({super.key});
@@ -18,9 +17,9 @@ class MainNewsScreen extends StatefulWidget {
 class _MainNewsScreenState extends State<MainNewsScreen> {
   final List<String> categories = [
     'Trending',
-    'Health',
-    'Sports',
-    'Finance',
+    'Stocks',
+    'CryptoCurrency',
+    'Technology',
     'Science',
   ];
 
@@ -94,12 +93,17 @@ class _MainNewsScreenState extends State<MainNewsScreen> {
           ),
           SizedBox(height: 20),
           StreamBuilder(
-            stream: TrendingService().getTrendingNews(),
+            stream: selectedIndex == 0
+                ? TrendingService().getTrendingNews()
+                : TrendingService().getTrendingCategoryNews(
+                    categories[selectedIndex],
+                  ),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(child: CircularProgressIndicator());
               }
               if (snapshot.hasError) {
+                print(snapshot.error);
                 return Center(
                   child: Text(
                     'Error: ${snapshot.error}',
@@ -121,7 +125,7 @@ class _MainNewsScreenState extends State<MainNewsScreen> {
                 return Align(
                   alignment: Alignment.center,
                   child: SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.9,
+                    width: MediaQuery.of(context).size.width * 0.95,
                     height: MediaQuery.of(context).size.height * 0.65,
                     child: CardSwiper(
                       cardsCount: data.length,

@@ -10,4 +10,15 @@ class TrendingService {
         .orderBy('timestamp', descending: true)
         .snapshots();
   }
+
+  Stream<QuerySnapshot<Map<String, dynamic>>> getTrendingCategoryNews(
+    String tag,
+  ) {
+    return _firestore
+        .collection('trending')
+        .where('description', isNotEqualTo: 'null')
+        .where('tag', isEqualTo: tag)
+        .orderBy('timestamp', descending: true)
+        .snapshots();
+  }
 }

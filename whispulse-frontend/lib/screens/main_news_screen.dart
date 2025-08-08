@@ -156,16 +156,19 @@ class _MainNewsScreenState extends State<MainNewsScreen> {
                             );
                             // }
                           },
-                          child: _buildNewsCard(
-                            color:
-                                MyColors().cardColors[index %
-                                    MyColors().cardColors.length],
-                            title: news['title'] ?? '',
-                            description: news['description'] ?? '',
-                            tag: news['tag'] ?? '',
-                            image: news['image'],
-                            score: (news['score'] ?? 0).toDouble(),
-                            timestamp: news['timestamp'].toString(),
+                          child: Hero(
+                            tag: "123",
+                            child: _buildNewsCard(
+                              color:
+                                  MyColors().cardColors[index %
+                                      MyColors().cardColors.length],
+                              title: news['title'] ?? '',
+                              description: news['description'] ?? '',
+                              tag: news['tag'] ?? '',
+                              image: news['image'],
+                              score: (news['score'] ?? 0).toDouble(),
+                              timestamp: news['timestamp'].toString(),
+                            ),
                           ),
                         );
                       },

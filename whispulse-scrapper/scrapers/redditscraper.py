@@ -17,7 +17,7 @@ def is_useful_post(text):
 
 def scrape_reddit(subreddits=None, limit=100):
     if subreddits is None:
-        subreddits = ["CryptoCurrency", "Stocks", "Technology","Science","Health"]
+        subreddits = ["Science","Health","Technology","CryptoCurrency", "Stocks",]
 
     # Reddit API setup
     reddit = praw.Reddit(

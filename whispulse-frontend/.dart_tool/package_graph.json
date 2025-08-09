@@ -15,9 +15,11 @@
         "firebase_core",
         "flutter",
         "flutter_card_swiper",
+        "font_awesome_flutter",
         "google_fonts",
         "google_nav_bar",
         "hugeicons",
+        "solar_icons",
         "url_launcher"
       ],
       "devDependencies": [
@@ -58,6 +60,20 @@
         "test_api",
         "vector_math",
         "vm_service"
+      ]
+    },
+    {
+      "name": "solar_icons",
+      "version": "0.0.5",
+      "dependencies": [
+        "flutter"
+      ]
+    },
+    {
+      "name": "font_awesome_flutter",
+      "version": "10.9.0",
+      "dependencies": [
+        "flutter"
       ]
     },
     {

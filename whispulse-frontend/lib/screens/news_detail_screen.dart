@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:getnew/utils/app_colors.dart';
 import 'package:getnew/utils/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hugeicons/hugeicons.dart';
+import 'package:solar_icons/solar_icons.dart';
 
 class NewsDetailScreen extends StatelessWidget {
   final Color color;
@@ -10,9 +12,11 @@ class NewsDetailScreen extends StatelessWidget {
   final String tag;
   final String? image;
   final double score;
+  final String herotag;
 
   const NewsDetailScreen({
     super.key,
+    required this.herotag,
     required this.title,
     required this.description,
     required this.tag,
@@ -34,7 +38,7 @@ class NewsDetailScreen extends StatelessWidget {
         ),
       ),
       body: Hero(
-        tag: "123",
+        tag: '123',
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: SingleChildScrollView(
@@ -79,7 +83,7 @@ class NewsDetailScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-        
+
                 // Title
                 Text(
                   title,
@@ -90,7 +94,7 @@ class NewsDetailScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 12),
-        
+
                 // Image if available
                 if (image != null)
                   ClipRRect(
@@ -103,7 +107,7 @@ class NewsDetailScreen extends StatelessWidget {
                     ),
                   ),
                 const SizedBox(height: 16),
-        
+
                 // Description
                 Text(
                   description,
@@ -112,6 +116,43 @@ class NewsDetailScreen extends StatelessWidget {
                     color: Colors.black54,
                     height: 1.5,
                   ),
+                ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  spacing: 8,
+                  children: [
+                    CircleAvatar(
+                      radius: 25,
+                      backgroundColor: AppColors.lightgrey,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(SolarIconsOutline.like, color: Colors.white),
+                      ),
+                    ),
+                    CircleAvatar(
+                      radius: 25,
+                      backgroundColor: AppColors.lightgrey,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          SolarIconsOutline.dislike,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    CircleAvatar(
+                      radius: 25,
+                      backgroundColor: AppColors.lightgrey,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          HugeIcons.strokeRoundedShare03,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 20),
               ],

@@ -60,7 +60,7 @@ class _MainNewsScreenState extends State<MainNewsScreen> {
       ),
       body: Column(
         children: [
-          // Category Tabs
+          // Category Tabsb
           Padding(
             padding: const EdgeInsets.only(top: 25),
             child: SizedBox(
@@ -144,20 +144,22 @@ class _MainNewsScreenState extends State<MainNewsScreen> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => NewsDetailScreen(
+                                  image: news['image'],
                                   color:
                                       MyColors().cardColors[index %
                                           MyColors().cardColors.length],
-                                  title: news['title'] ?? '',
-                                  description: news['description'] ?? '',
-                                  tag: news['tag'] ?? '',
-                                  score: news['score'] ?? '',
+                                  title: news['title'],
+                                  description: news['description'],
+                                  tag: news['tag'],
+                                  score: news['score'],
+                                  herotag: '123$index',
                                 ),
                               ),
                             );
                             // }
                           },
                           child: Hero(
-                            tag: "123",
+                            tag: "123$index",
                             child: _buildNewsCard(
                               color:
                                   MyColors().cardColors[index %

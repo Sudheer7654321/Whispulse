@@ -102,6 +102,10 @@ flutter_lints
 3.5
 file:///C:/Users/Sudhe/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-5.0.0/
 file:///C:/Users/Sudhe/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-5.0.0/lib/
+font_awesome_flutter
+3.0
+file:///C:/Users/Sudhe/AppData/Local/Pub/Cache/hosted/pub.dev/font_awesome_flutter-10.9.0/
+file:///C:/Users/Sudhe/AppData/Local/Pub/Cache/hosted/pub.dev/font_awesome_flutter-10.9.0/lib/
 freezed_annotation
 3.0
 file:///C:/Users/Sudhe/AppData/Local/Pub/Cache/hosted/pub.dev/freezed_annotation-3.1.0/
@@ -234,6 +238,10 @@ shared_preferences_windows
 3.3
 file:///C:/Users/Sudhe/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_windows-2.4.1/
 file:///C:/Users/Sudhe/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_windows-2.4.1/lib/
+solar_icons
+2.12
+file:///C:/Users/Sudhe/AppData/Local/Pub/Cache/hosted/pub.dev/solar_icons-0.0.5/
+file:///C:/Users/Sudhe/AppData/Local/Pub/Cache/hosted/pub.dev/solar_icons-0.0.5/lib/
 source_span
 3.1
 file:///C:/Users/Sudhe/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.1/

@@ -5,7 +5,6 @@ import admin from 'firebase-admin';
 
 // For Node 18+, fetch is built-in; otherwise: import fetch from 'node-fetch';
 dotenv.config();
-
 const app = express();
 app.use(cors());
 app.use(express.json());

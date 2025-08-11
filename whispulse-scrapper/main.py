@@ -3,7 +3,7 @@ import requests
 from scrapers.redditscraper import scrape_reddit
 from scrapers.twitterscraper import scrape_twitter
 
-BACKEND_URL = "http://localhost:3000/trending"
+BACKEND_URL = "https://api-whispulse.onrender.com/trending"
 
 def main():
     reddit_results = scrape_reddit()

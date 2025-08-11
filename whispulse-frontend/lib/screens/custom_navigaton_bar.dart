@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:getnew/screens/profile_screen.dart';
 import 'package:getnew/utils/app_colors.dart';
 import 'package:getnew/screens/main_news_screen.dart';
 import 'package:getnew/screens/news_detail_screen.dart';
-import 'package:getnew/screens/saved_news_screen.dart';
 import 'package:hugeicons/hugeicons.dart';
 
 class MainAppScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
     MainNewsScreen(),
     // NewsDetailScreen(title: title, description: description, tag: tag, score: score),
     Placeholder(),
-    SavedNewsScreen(),
+    ProfileScreen(),
   ];
 
   @override
@@ -54,7 +54,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
                 children: [
                   _buildNavButton(HugeIcons.strokeRoundedHome02, 0),
                   _buildNavButton(HugeIcons.strokeRoundedSearch01, 1),
-                  _buildNavButton(HugeIcons.strokeRoundedBookmark02, 2),
+                  _buildNavButton(HugeIcons.strokeRoundedProfile02, 2),
                 ],
               ),
             ),

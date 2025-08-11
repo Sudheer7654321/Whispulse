@@ -67,7 +67,7 @@ app.post('/trending', async (req, res) => {
     if (!title || !tag || score === undefined) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
-
+    console.log('added')
     await db.collection('trending').add({
       title,
       tag,

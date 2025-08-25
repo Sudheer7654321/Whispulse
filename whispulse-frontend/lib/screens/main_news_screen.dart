@@ -20,7 +20,7 @@ class _MainNewsScreenState extends State<MainNewsScreen> {
     'Stocks',
     'CryptoCurrency',
     'Technology',
-    'Science',
+    'Science', 
   ];
 
   int selectedIndex = 0;
